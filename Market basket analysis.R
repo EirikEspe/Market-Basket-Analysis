@@ -156,7 +156,7 @@ ggplot(num_rules, aes(x = confidenceLevels)) +
 rules <- apriori(Tr, parameter = list(supp = 0.01, conf = 0.3))
 
 # Define 'High-confidence' rules
-rules_conf <- sort (rules, by = "confidence", decreasing=TRUE)
+rules_conf <- sort(rules, by = "confidence", decreasing=TRUE)
 
 # Show the support, confidence and lift for for 6 rules with highest confidence
 inspect(head(rules_conf))
