@@ -21,8 +21,9 @@ Tr <- read.transactions("ElectronidexTransactions2017.csv",
                         header = FALSE, sep = ",",
                         rm.duplicates = TRUE)
 
-#Most and least frequently purchased items
+#Most frequently purchased items
 head(sort(itemFrequency(Tr, type="absolute"), decreasing = TRUE), n = 10)
+
 
 #Create a dataframe to make a treemap
 df <- as.data.frame(head(sort(itemFrequency(Tr, type="absolute"), 
